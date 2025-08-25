@@ -43,5 +43,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - curl -sSf http://orange-svc-cka10-trb:80 || exit 1
+            - curl -sSf http://orange-app-cka10-trb-service:80 || exit 1
           restartPolicy: OnFailure
