@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: nginx
-    image: nginx:stable
+    image: nginx:stableeeeee
     ports:
       - containerPort: 80
         name: http-web-svc
@@ -22,6 +22,7 @@ spec:
     app.kubernetes.io/name: proxy
   ports:
   - name: name-of-service-port
+    type: NodeIP
     protocol: TCP
     port: 80
     targetPort: http-web-svc
@@ -43,5 +44,5 @@ spec:
             command:
             - /bin/sh
             - -c
-            - curl -sSf http://orange-app-cka10-trb-service:80 || exit 1
+            - curl
           restartPolicy: OnFailure
